@@ -1,0 +1,8 @@
+<table>
+    <Hooks>   
+	    <hook file="StatDisplay.lua" source_file="lib/utils/accelbyte/telemetry"/>
+		<hook file="StatDisplay.lua" source_file="lib/network/base/networkpeer"/>
+		<hook file="StatDisplay.lua" source_file="lib/managers/hudmanagerpd2"/>
+		<hook file="StatDisplay.lua" source_file="lib/managers/menumanager"/>
+    </Hooks>
+</table>
