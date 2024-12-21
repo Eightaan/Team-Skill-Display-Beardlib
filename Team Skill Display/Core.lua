@@ -65,8 +65,8 @@ function Skillinfo:UpdatePanelPositions()
 	for i = 1, 4 do
 		if Skillinfo.Players[i][3] ~= 0 then
 			Skillinfo.stats[i]:set_position(
-				-(RenderSettings.resolution.x / 2.1) + 0.5 * RenderSettings.resolution.x,
-				-(RenderSettings.resolution.y / 1) + pos / 4 * RenderSettings.resolution.y
+				-(RenderSettings.resolution.x / 2.1) + 0.5 * RenderSettings.resolution.x + (SkillInfo.Options:GetValue("Skill_x") * 10),
+				-(RenderSettings.resolution.y / 1) + pos / 4 * RenderSettings.resolution.y + (SkillInfo.Options:GetValue("Skill_y") * 10)
 			)
 			pos = pos + 0.3
 		end
@@ -97,8 +97,6 @@ function Skillinfo:InfoPanel()
 		for i=1, 4 do
 			Skillinfo.stats[i] = Skillinfo.overlay:panel():text{
 				name = "name" .. i, 
-				x = - (RenderSettings.resolution.x/2.1) + 0.5 * RenderSettings.resolution.x, 
-				y = - (RenderSettings.resolution.y/1) + pos/4 * RenderSettings.resolution.y, 
 				font = tweak_data.menu.pd2_small_font,
 				color = tweak_data.chat_colors[i],
 				alpha = 0

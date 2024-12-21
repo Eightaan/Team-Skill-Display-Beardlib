@@ -4,5 +4,9 @@
 	"SkillInfoDetailed_skillsTitleID" : "Detailed Skill Display",
 	"SkillInfoDetailed_skillsDescID" : "Display each skill in each skill subtree.",
 	"SkillInfoFontTitleID" : "Font Size",
-	"SkillInfoFontDescID" : "Adjust the text size on the skill display."
+	"SkillInfoFontDescID" : "Adjust the text size on the skill display.",
+	"SkillInfoSkill_xTitleID" : "Horisontal Panel Position",
+	"SkillInfoSkill_xDescID" : "Adjust the position of the panel on the screen.",
+	"SkillInfoSkill_yTitleID" : "Vertical Panel Position",
+	"SkillInfoSkill_yDescID" : "Adjust the position of the panel on the screen."
 }
