@@ -1,5 +1,5 @@
 <mod name="Team Skill Display" author="Eightan" global_key="SkillInfo" color="Color(0,0.66,1)" core_class="Core.lua">
-	<!-- <AssetUpdates id="" provider="modworkshop" version="1.1"/> -->
+	<AssetUpdates id="50612" provider="modworkshop" version="1.1"/>
 	
 	<Hooks directory="lua">
 		<hook file="SkillDisplay.lua" source_file="lib/utils/accelbyte/telemetry"/>
