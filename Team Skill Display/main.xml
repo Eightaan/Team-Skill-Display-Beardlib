@@ -9,7 +9,7 @@
 
 	<Localization directory="loc" default="english.json"/>
 	
-		<Options prefix_id="SkillInfo" save_file="SkillInfo.json">
+	<Options prefix_id="SkillInfo" save_file="SkillInfo.json">
 		<options>
 				<option type="number" min="10" max="35" step="1" decimal_count="0" show_value="true" default_value="20" name="Font"/>
 				<option type="bool" default_value="false" name="Detailed_skills"/>
