@@ -1,0 +1,8 @@
+{
+	"SkillInfoOptionsButtonTitleID" : "Team Skill Display",
+	"SkillInfoOptionsButtonDescID" : "Team Skill Display options.",
+	"SkillInfoDetailed_skillsTitleID" : "Detailed Skill Display",
+	"SkillInfoDetailed_skillsDescID" : "Display each skill in each skill subtree.",
+	"SkillInfoFontTitleID" : "Font Size",
+	"SkillInfoFontDescID" : "Adjust the text size on the skill display."
+}

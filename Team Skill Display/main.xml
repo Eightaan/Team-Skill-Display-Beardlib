@@ -1,8 +1,18 @@
-<table>
-    <Hooks>   
-	    <hook file="StatDisplay.lua" source_file="lib/utils/accelbyte/telemetry"/>
-		<hook file="StatDisplay.lua" source_file="lib/network/base/networkpeer"/>
-		<hook file="StatDisplay.lua" source_file="lib/managers/hudmanagerpd2"/>
-		<hook file="StatDisplay.lua" source_file="lib/managers/menumanager"/>
-    </Hooks>
-</table>
+<mod name="Team Skill Display" author="Eightan" global_key="SkillInfo" color="Color(0,0.66,1)" core_class="Core.lua">
+	<!-- <AssetUpdates id="" provider="modworkshop" version="1.1"/> -->
+	
+	<Hooks directory="lua">
+		<hook file="SkillDisplay.lua" source_file="lib/utils/accelbyte/telemetry"/>
+		<hook file="SkillDisplay.lua" source_file="lib/network/base/networkpeer"/>
+		<hook file="SkillDisplay.lua" source_file="lib/managers/hudmanagerpd2"/>	
+	</Hooks>
+
+	<Localization directory="loc" default="english.json"/>
+	
+		<Options prefix_id="SkillInfo" save_file="SkillInfo.json">
+		<options>
+				<option type="number" min="10" max="35" step="1" decimal_count="0" show_value="true" default_value="20" name="Font"/>
+				<option type="bool" default_value="false" name="Detailed_skills"/>
+		</options>
+	</Options>
+</mod>
