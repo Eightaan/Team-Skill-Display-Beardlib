@@ -6,11 +6,11 @@ if RequiredScript == "lib/network/base/networkpeer" then
 	end)
 
 	Hooks:Add("BaseNetworkSessionOnPeerRemoved", "Skillinfo:PeerRemoved", function(peer, peer_id)
-		for j = 1, 9 do
+		for j = 1,9 do
 			Skillinfo.Players[peer_id][j] = 0
 		end
 
-		for i = 1, 4 do
+		for i = 1,4 do
 			if Skillinfo.stats and Skillinfo.stats[i]:alpha() > 0 then
 				Skillinfo.stats[i]:hide()
 			end
@@ -20,7 +20,7 @@ if RequiredScript == "lib/network/base/networkpeer" then
 
 elseif RequiredScript == "lib/managers/hudmanagerpd2" then	
 	Hooks:PostHook(HUDManager, "show_stats_screen", "HUDManager_show_stats_screen_skillinfo", function (self)
-		if managers.network:session() and Utils:IsInHeist() then
+		if managers.network:session() then
 			Skillinfo:Information_To_HUD(managers.network:session():peer(_G.LuaNetworking:LocalPeerID()))
 			for _, peer in pairs(managers.network:session():peers()) do
 				Skillinfo:Information_To_HUD(peer)
@@ -30,8 +30,8 @@ elseif RequiredScript == "lib/managers/hudmanagerpd2" then
 	end)
 	
 	Hooks:PostHook(HUDManager, "hide_stats_screen", "HUDManager_hide_stats_screen_skillinfo", function (self)
-		if managers.network:session() and Utils:IsInHeist() then
-			for i = 1, 4 do
+		if managers.network:session() then
+			for i = 1,4 do
 				if Skillinfo.stats and Skillinfo.stats[i]:alpha() > 0 then
 					Skillinfo:FadeEffect(Skillinfo.stats[i], "out", 0.4, 25)
 				end
@@ -41,7 +41,7 @@ elseif RequiredScript == "lib/managers/hudmanagerpd2" then
 
 elseif RequiredScript == "lib/utils/accelbyte/telemetry" then
 	Hooks:PostHook(Telemetry, "on_end_heist", "skillinfo_on_end_heist", function(self)
-		for i = 1, 4 do
+		for i = 1,4 do
 			if Skillinfo.stats and Skillinfo.stats[i]:alpha() > 0 then
 				Skillinfo.stats[i]:hide()
 			end

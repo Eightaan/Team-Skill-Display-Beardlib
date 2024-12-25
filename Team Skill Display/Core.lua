@@ -61,8 +61,7 @@ end
 
 function Skillinfo:UpdatePanelPositions()
 	local pos = 5
-
-	for i = 1, 4 do
+	for i = 1,4 do
 		if Skillinfo.Players[i][3] ~= 0 then
 			Skillinfo.stats[i]:set_position(
 				-(RenderSettings.resolution.x / 2.1) + 0.5 * RenderSettings.resolution.x + (SkillInfo.Options:GetValue("Skill_x") * 10),
@@ -92,22 +91,18 @@ function Skillinfo:InfoPanel()
 	if not Skillinfo.overlay then
 		Skillinfo.overlay = Overlay:newgui():create_screen_workspace() or {}
 		Skillinfo.stats = {}
-		local pos = 5
-
-		for i=1, 4 do
+		for i=1,4 do
 			Skillinfo.stats[i] = Skillinfo.overlay:panel():text{
 				name = "name" .. i, 
 				font = tweak_data.menu.pd2_small_font,
 				color = tweak_data.chat_colors[i],
 				alpha = 0
 			}
-			pos = pos + 0.3
 		end
 	end
-
 	Skillinfo:UpdatePanelPositions()
 
-	for i=1, 4 do
+	for i=1,4 do
 		if Skillinfo.Players[i][3] ~= 0 then
 			Skillinfo.stats[i]:set_text(Skillinfo.Players[i][3])
 			Skillinfo.stats[i]:set_font_size(SkillInfo.Options:GetValue("Font") or 0)
