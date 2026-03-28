@@ -9,14 +9,25 @@ if not _G.Skillinfo then
 	end
 end
 
-function Skillinfo:FadeEffect(panel, fade_direction, duration, steps)
-	local fade_increment = 1 / steps
-	for step = 1, steps do
-		local alpha_value = fade_direction == "in" and fade_increment * step or 1 - fade_increment * step
-		DelayedCalls:Add("Skillinfo:Fade_" .. panel:name() .. "_" .. step, (step - 1) * (duration / steps), function()
-			panel:set_alpha(alpha_value)
-		end)
-	end
+function Skillinfo:FadeEffect(panel, fade_direction, duration)
+    panel:stop()
+
+    panel:animate(function(o)
+        local start = o:alpha()
+        local target = fade_direction == "in" and 1 or 0
+        local t = 0
+
+        while t < duration do
+            t = t + coroutine.yield()
+            local progress = math.clamp(t / duration, 0, 1)
+            o:set_alpha(math.lerp(start, target, progress))
+        end
+
+        o:set_alpha(target)
+        if target == 0 then
+            o:hide()
+        end
+    end)
 end
 
 function Skillinfo:NumberFormat(input_data)
