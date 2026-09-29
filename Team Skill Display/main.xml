@@ -1,5 +1,5 @@
 <mod name="Team Skill Display" author="Eightan" global_key="SkillInfo" color="Color(0,0.66,1)" core_class="Core.lua">
-	<AssetUpdates id="50612" provider="modworkshop" version="1.4"/>
+	<AssetUpdates id="50612" provider="modworkshop" version="1.5"/>
 	
 	<Hooks directory="lua">
 		<hook file="SkillDisplay.lua" source_file="lib/utils/accelbyte/telemetry"/>
@@ -9,13 +9,13 @@
 
 	<Localization directory="loc" default="english.json"/>
 	
-	<Options prefix_id="SkillInfo" save_file="SkillInfo.json">
+	<Options prefix_id="SkillInfo" save_file="SkillInfoV2.json">
 		<options>
-			<option type="number" min="10" max="35" step="1" decimal_count="0" show_value="true" default_value="20" name="Font"/>
+			<option type="number" min="10" max="35" step="1" decimal_count="0" show_value="true" default_value="25" name="Font"/>
 			<option type="bool" default_value="false" name="Detailed_skills"/>
 			<divider name="override_divider" size="16"/>
-			<option type="number" min="0" max="110" step="1" decimal_count="0" show_value="true" default_value="0" name="Skill_x"/>
-			<option type="number" min="-25" max="45" step="1" decimal_count="0" show_value="true" default_value="-4" name="Skill_y"/>
+			<option type="number" min="0" max="300" step="1" decimal_count="0" show_value="true" default_value="0" name="Skill_x"/>
+			<option type="number" min="0" max="300" step="1" decimal_count="0" show_value="true" default_value="25" name="Skill_y"/>
 		</options>
 	</Options>
 </mod>

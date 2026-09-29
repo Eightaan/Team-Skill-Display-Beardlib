@@ -76,7 +76,7 @@ function Skillinfo:UpdatePanelPositions()
 		if Skillinfo.Players[i][3] ~= 0 then
 			Skillinfo.stats[i]:set_position(
 				-(RenderSettings.resolution.x / 2.1) + 0.5 * RenderSettings.resolution.x + (SkillInfo.Options:GetValue("Skill_x") * 10),
-				-(RenderSettings.resolution.y / 1) + pos / 4 * RenderSettings.resolution.y + (SkillInfo.Options:GetValue("Skill_y") * 10)
+				-(RenderSettings.resolution.y / 1) + pos / 4 * RenderSettings.resolution.y + (SkillInfo.Options:GetValue("Skill_y") * 10) - 250
 			)
 			pos = pos + 0.3
 		end
